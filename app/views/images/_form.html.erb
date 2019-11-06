@@ -13,12 +13,17 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title , placeholder: "Title", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description , placeholder: "Description", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
   </div>
 
   <div class="field">
@@ -28,12 +33,12 @@
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price , placeholder: "Price", class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :collection %>
-    <%= form.text_field :collection %>
+    <%= form.text_field :collection , placeholder: "Collection", class: "form-control" %>
   </div>
 
   <div class="actions">

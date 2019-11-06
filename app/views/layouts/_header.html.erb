@@ -1,0 +1,11 @@
+<%= nav_bar fixed: :top, brand: "Obsidian Collection", brand_link: root_path do %>
+    <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path %>
+    <% else %>
+        <%= menu_group pull: :right do %>
+            <%= link_to "Get Started", new_user_registration_path , class: "btn btn-link" %>
+            <%= link_to "Login", new_user_session_path , class: "btn btn-link btn-outline-secondary" %>
+        <% end %>
+    <% end %>
+<% end %>
+<br><br>
