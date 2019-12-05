@@ -4,6 +4,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
+    @imagesrecent = Image.order("created_at DESC").first(3)
     @images = Image.all
   end
 

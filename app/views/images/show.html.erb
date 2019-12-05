@@ -1,10 +1,11 @@
+<br>
 <p id="notice"><%= notice %></p>
 <div class="col-md-8">
 
   <p>
-    <%= link_to @image.photo do %>
+    <%#= link_to @image.photo do %>
     <%= image_tag @image.photo.variant(resize: "750x450", combine_options: { gravity: 'southeast', draw: 'image Over 0,100 200,50 "' + Image::WATERMARK_PATH.to_s + '"' }) %>
-    <% end %>
+    <%# end %>
   </p>
 
 </div>
