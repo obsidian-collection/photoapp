@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-    <%= image_tag("obsidian-image.png", style: 'height:auto;width:100%;', class: 'img-fluid') %> 
+<%= image_tag("obsidian-image.png", style: 'height:auto;width:100%;', class: 'img-fluid') %> 
       <br><br>
+
+<div class="row">
+    
   <div class="container">
     <h1>
       <center>Featured Images</center>
@@ -20,6 +22,11 @@
               </div>
             <% end %>
           </div>
+    <br>
+    <div class="apple_pagination">
+      <%= will_paginate @images, container: false %>
+    </div>
+    
     
     <h1>
       <center>Most Recent Images</center>
@@ -27,17 +34,12 @@
     <div class="row">
             <% @imagesrecent.each do |image| %>
               <div class="col-sm-6 col-md-4 col-lg-3">
-                <%= link_to image_tag(image.photo.variant(resize: '300x300!')), image %>
-
-                <%#= image.title %>
-                <%#= link_to 'Show', image %>
-                <%#= link_to 'Edit', edit_image_path(image) %>
-                <%#= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%#= link_to image_tag(image.photo.variant(resize: '300x300!')), image %>
               </div>
             <% end %>
           </div>
-  </div> <! -- container -- >
-</div> <!-- row -- >
+  </div> <!-- container -->
+</div> <!-- row -->
 
 
 <%= link_to 'New Image', new_image_path %>
