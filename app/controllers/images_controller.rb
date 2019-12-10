@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @imagesrecent = Image.order("created_at DESC").first(3)
-    @images = Image.all.paginate(page: params[:page], per_page: 4)
+    @images = Image.all.paginate(page: params[:page], per_page: 15)
   end
 
   # GET /images/1
