@@ -13,8 +13,9 @@
           <div class="row">
             <% @images.each do |image| %>
               <div class="col-sm-6 col-md-4 col-lg-3">
+               <%# if @image.photo.attached? %>
                 <%= link_to image_tag(image.photo.variant(resize: '300x300!')), image %>
-
+                <%# end %>
                 <%#= image.title %>
                 <%#= link_to 'Show', image %>
                 <%#= link_to 'Edit', edit_image_path(image) %>
@@ -41,5 +42,6 @@
   </div> <!-- container -->
 </div> <!-- row -->
 
-
-<%= link_to 'New Image', new_image_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Image', new_image_path %>
+<% end %>
