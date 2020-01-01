@@ -8,5 +8,5 @@ class Image < ApplicationRecord
   # Upgrade to rails 6 or consider using this gem https://github.com/igorkasyanchuk/active_storage_validations
   
   belongs_to :user
-  WATERMARK_PATH = Rails.root.join('lib', 'assets', 'images', 'test-watermark.jpeg')
+  WATERMARK_PATH = Rails.root.join('lib', 'assets', 'images', 'Obsidian-logo-2020-watermark.png') 
 end

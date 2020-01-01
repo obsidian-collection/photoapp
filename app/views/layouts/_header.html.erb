@@ -1,13 +1,13 @@
-<%= nav_bar fixed: :top, brand: "Obsidian Collection", brand_link: root_path do %>
+<%= nav_bar static: :top, brand: "Obsidian Collection", brand_link: root_path do %>
   <% if user_signed_in? %>
     <%= menu_group pull: :right do %>
         <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-link btn-lg" %>
     <% end %>
   <% else %>
         <%= menu_group pull: :right do %>
-            <%= link_to "Get Started", new_user_registration_path, class: "btn btn-link btn-lg" %>
-            <%= link_to "Login", new_user_session_path, class: "btn btn-link btn-lg" %>
+            <%#= link_to "Get Started", new_user_registration_path, class: "btn btn-link btn-lg", type: "button" %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-danger btn-lg" %>
         <% end %>
    <% end %>
 <% end %>
-<br /><br />
+
