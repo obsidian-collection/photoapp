@@ -11,8 +11,8 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: photoapp_development
+  adapter: sqlite3
+  database: db/developement.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,4 +25,4 @@ production:
   <<: *default
   database: photoapp_production
   username: 
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  password: <%= ENV['OBSIDIAN_DATABASE_PASSWORD'] %>
