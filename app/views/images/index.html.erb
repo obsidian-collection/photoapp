@@ -6,8 +6,8 @@
     <p class="lead">Sharing our African American Images</p>
   </div>
 </div>
-<div class="row">
-    
+<%= link_to 'New Image', new_image_path %>
+<div class="row">   
   <div class="container">
           <div class="row">
             <% @images.each do |image| %>
@@ -41,6 +41,6 @@
   </div> <!-- container -->
 </div> <!-- row -->
 
-<% if user_signed_in? %>
-  <%= link_to 'New Image', new_image_path %>
-<% end %>
+<%# if user_signed_in? %>
+  <%#= link_to 'New Image', new_image_path %>
+<%# end %>
